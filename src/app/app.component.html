@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="main">
+  <div class="container">
+    <h1>
+      Tip calculator
+    </h1>
+    <input
+      id="amount"
+      name="amt"
+      class="entry"
+      type="number"
+      placeholder="bill amount"
+      [(ngModel)]="amt"
+    />
+    <input
+      name="per"
+      id="persons"
+      class="entry"
+      type="number"
+      placeholder="persons"
+      [(ngModel)]="per"
+    />
+    <select (change)="changeHandler($event)" class="entry" id="services">
+      <option value="0.25">25%-Excellent</option>
+      <option value="0.20">20%-Best</option>
+      <option value="0.15">15%-Better</option>
+      <option value="0.10">10%-Good</option>
+    </select>
+    <button (click)="calculateTip()" class="btn">Calculate Tip</button>
+    <h3>Tip Amount for each person-Rs.{{tip2}}</h3>
+  </div>
+</div>
